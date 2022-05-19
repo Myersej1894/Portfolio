@@ -5,7 +5,8 @@ body {
 header {
     color: white;
     display: flex;
-    justify-content: first baseline;
+    justify-content: baseline;/*This isn't doing anything, and I'm not sure what you want to do*/
+    /*You want to add align-items:flex-start; here so the logo doesn't stretch weird on small screen sizes*/
 }
 header>img {
     max-width: 30rem;
@@ -54,10 +55,12 @@ img {
 }
 section {
     padding: 1rem;
+    /*I recommend adding a max-width here of about 60rem, then with margin:auto; you can center the content on desktop. Then it won't be floating off to the left. If you add the max-width and margin, I recommend also adding that to the header too, so they line up.*/
 }
 @media (min-width:1100px) {
     .about div {
         display: block;
+        /*I recommend adding width:unset; so the divs can take up the whole width.*/
     }
     .about img {
         width: 48%;
@@ -65,10 +68,12 @@ section {
     }
     .contact div {
         display: block;
+        /*I recommend adding width:unset; so the divs can take up the whole width.*/
     }
     .contact img {
         width: 48%;
     }
+    /*I recommend adding .gallery div with a width unset and display block. So it is easier to read the writings. If you do this you can also add float:left (this will put the image and text next to each other) to that poem-3 image with a margin-right to get a little bit of space between the writing and the text. */
     .gallery img {
         width: 48%;
         vertical-align: text-top;
